@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="card shadow px-2 py-2 mb-4">
+        <h4 class="text-primary m-0 font-weight-bold">Add Client Testimonial</h4>
+    </div>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Client Details</h6>
+        </div>
+        <div class="card-body">
+            <form action="/api/client/add" method="post" enctype="multipart/form-data">
+                <div class="form-row">
+                    
+                    <div class="form-group col-lg-6">
+                        <label>Subtitle</label>
+                        <input type="text" class="form-control" name="subtitle" value="WHY WITH US">
+                    </div>
+
+                    <div class="form-group col-lg-6">
+                        <label>Main Title</label>
+                        <input type="text" class="form-control" name="title" placeholder="e.g. Kind Words From Clients" required>
+                    </div>
+
+                    <div class="form-group col-lg-4">
+                        <label>Client Name</label>
+                        <input type="text" class="form-control" name="name" placeholder="e.g. THOMAS" required>
+                    </div>
+
+                    <div class="form-group col-lg-4">
+                        <label>Client Role</label>
+                        <input type="text" class="form-control" name="role" placeholder="e.g. Happy Customer" required>
+                    </div>
+
+                    <div class="form-group col-lg-4">
+                        <label>Client Image</label>
+                        <input type="file" class="form-control-file" name="image" required>
+                    </div>
+
+                    <div class="form-group col-lg-12">
+                        <label>Description (Testimonial)</label>
+                        <textarea name="description" rows="4" class="form-control" placeholder="Enter the client's feedback..." required></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Save Client Record</button>
+                <a href="/api/client/all" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>

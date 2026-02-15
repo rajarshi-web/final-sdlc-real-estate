@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./layouts/head.ejs') %>
+
+<body id="page-top">
+    <div id="wrapper">
+        <%- include('./layouts/sidebar.ejs') %>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <%- include('./layouts/topbar.ejs') %>
+
+                <div class="container-fluid">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 bg-white">
+                            <h6 class="m-0 font-weight-bold text-warning">Edit Team Member</h6>
+                        </div>
+                        <div class="card-body">
+                            <form action="/team/update/<%= member._id %>" method="POST" enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <div class="form-group">
+                                            <label class="text-dark font-weight-bold">Member Name</label>
+                                            <input type="text" name="name" class="form-control" value="<%= member.name %>" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="text-dark font-weight-bold">Designation (Post)</label>
+                                            <input type="text" name="post" class="form-control" value="<%= member.post %>" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="text-dark font-weight-bold">Update Profile Photo</label>
+                                            <input type="file" name="image" class="form-control-file">
+                                            <small class="text-muted">Leave empty to keep the current photo.</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-4 text-center border-left">
+                                        <label class="d-block text-dark font-weight-bold">Current Photo</label>
+                                        <img src="/uploads/<%= member.image %>" 
+                                             class="img-thumbnail rounded-circle shadow" 
+                                             style="width: 150px; height: 150px; object-fit: cover;">
+                                    </div>
+                                </div>
+
+                                <hr>
+                                <button type="submit" class="btn btn-warning shadow-sm px-4">Update Member</button>
+                                <a href="/team-list" class="btn btn-secondary px-4 ml-2">Cancel</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%- include('./layouts/footer.ejs') %>
+        </div>
+    </div>
+</body>
+</html>

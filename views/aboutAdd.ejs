@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./layouts/head.ejs') %>
+
+<body id="page-top">
+    <div id="wrapper">
+        <%- include('./layouts/sidebar.ejs') %>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <%- include('./layouts/topbar.ejs') %>
+
+                <div class="container-fluid">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 bg-white">
+                            <h6 class="m-0 font-weight-bold text-primary">Add New Content Entry</h6>
+                        </div>
+                        <div class="card-body">
+                            <form action="/content/create" method="POST" enctype="multipart/form-data">
+                                
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label class="font-weight-bold text-dark">Main Title</label>
+                                            <input type="text" name="mainTitle" class="form-control" placeholder="e.g. Your Trusted Partner" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="font-weight-bold text-dark">Description</label>
+                                            <textarea name="description" class="form-control" rows="4" required></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="font-weight-bold text-dark">Customer Count</label>
+                                            <input type="text" name="customerCount" class="form-control" placeholder="e.g. 500+">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="font-weight-bold text-dark">Main Image</label>
+                                            <input type="file" name="mainImage" class="form-control-file" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+                                <h5 class="font-weight-bold text-success mb-3">Skills (Progress Bars)</h5>
+                                <div class="row">
+                                    <% for(let i=0; i < 3; i++) { %>
+                                        <div class="col-md-4">
+                                            <div class="card bg-light p-2 mb-3">
+                                                <input type="text" name="skills[<%=i%>][name]" class="form-control mb-2" placeholder="Skill Name (e.g. Design)">
+                                                <input type="number" name="skills[<%=i%>][percentage]" class="form-control" placeholder="Percentage (0-100)">
+                                            </div>
+                                        </div>
+                                    <% } %>
+                                </div>
+
+                                <div class="mt-4">
+                                    <button type="submit" class="btn btn-primary px-5 shadow-sm">Save Content</button>
+                                    <a href="/content-list" class="btn btn-secondary px-4 ml-2">Cancel</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%- include('./layouts/footer.ejs') %>
+        </div>
+    </div>
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/sb-admin-2.min.js"></script>
+</body>
+</html>

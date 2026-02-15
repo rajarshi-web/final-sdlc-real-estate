@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./layouts/head.ejs') %>
+
+<body id="page-top">
+    <div id="wrapper">
+        <%- include('./layouts/sidebar.ejs') %>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <%- include('./layouts/topbar.ejs') %>
+
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Manage Clients</h1>
+                        <a href="/client-add" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                            <i class="fas fa-plus fa-sm text-white-50"></i> Add New Client
+                        </a>
+                    </div>
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Client Testimonials List</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Image</th>
+                                            <th>Name</th>
+                                            <th>Role</th>
+                                            <th>Subtitle</th>
+                                            <th>Title</th>
+                                            <th>Description</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% if(clients.length > 0) { %>
+                                            <% clients.forEach(client => { %>
+                                                <tr>
+                                                    <td>
+                                                        <img src="/uploads/<%= client.image %>" width="60" class="img-profile rounded-circle">
+                                                    </td>
+                                                    <td><strong><%= client.name %></strong></td>
+                                                    <td><%= client.role %></td>
+                                                    <td><span class="badge badge-info"><%= client.subtitle %></span></td>
+                                                    <td><%= client.title %></td>
+                                                    <td><%= client.description %></td>
+                                                    <td>
+                                                        <a href="/client-edit/<%= client._id %>" class="btn btn-warning btn-sm">
+                                                            <i class="fas fa-edit"></i>
+                                                        </a>
+                                                        <a href="/client-delete/<%= client._id %>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this client?')">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            <% }) %>
+                                        <% } else { %>
+                                            <tr>
+                                                <td colspan="6" class="text-center">No client records found.</td>
+                                            </tr>
+                                        <% } %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+            <%- include('./layouts/footer.ejs') %>
+        </div>
+    </div>
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/js/sb-admin-2.min.js"></script>
+</body>
+</html>

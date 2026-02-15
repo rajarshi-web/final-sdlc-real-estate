@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./layouts/head.ejs') %>
+
+    <body id="page-top">
+        <div id="wrapper">
+            <%- include('./layouts/sidebar.ejs') %>
+                <div id="content-wrapper" class="d-flex flex-column">
+                    <div id="content">
+                        <%- include('./layouts/topbar.ejs') %>
+
+                            <div class="container-fluid">
+                                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                                    <h1 class="h3 mb-0 text-gray-800 font-weight-bold">FAQ Management</h1>
+                                    <a href="/faq-add" class="btn btn-primary shadow-sm">
+                                        <i class="fas fa-plus fa-sm text-white-50"></i> Add New FAQ
+                                    </a>
+                                </div>
+
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3 bg-white">
+                                        <h6 class="m-0 font-weight-bold text-primary">All Questions</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover border">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th>Question</th>
+                                                        <th>Answer</th>
+                                                        <th>Status</th>
+                                                        <th class="text-center">Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <% if(faqs && faqs.length> 0) { %>
+                                                        <% faqs.forEach(faq=> { %>
+                                                            <tr>
+                                                                <td class="font-weight-bold text-dark">
+                                                                    <%= faq.question %>
+                                                                </td>
+                                                                <td>
+                                                                    <%= faq.answer.substring(0, 70) %>...
+                                                                </td>
+                                                                <td>
+                                                                    <span
+                                                                        class="badge badge-<%= faq.status ? 'success' : 'secondary' %>">
+                                                                        <%= faq.status ? 'Active' : 'Inactive' %>
+                                                                    </span>
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    <a href="/faq-edit/<%= faq._id %>"
+                                                                        class="btn btn-warning btn-sm border-0 shadow-sm">
+                                                                        <i class="fas fa-edit"></i>
+                                                                    </a>
+                                                                    <a href="/faqs/delete/<%= faq._id %>"
+                                                                        class="btn btn-danger btn-sm"
+                                                                        onclick="return confirm('Are you sure you want to delete this FAQ?')">
+                                                                        <i class="fas fa-trash"></i> Delete
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <% }) %>
+                                                                <% } else { %>
+                                                                    <tr>
+                                                                        <td colspan="4"
+                                                                            class="text-center py-5 text-muted">No FAQs
+                                                                            available. Click "Add New" to start.</td>
+                                                                    </tr>
+                                                                    <% } %>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <%- include('./layouts/footer.ejs') %>
+                </div>
+        </div>
+    </body>
+
+</html>

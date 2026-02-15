@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <div class="card shadow px-2 py-2 mb-4">
+    <h4 class="text-primary m-0 font-weight-bold">Add New Blog</h4>
+  </div>
+
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Blog Details</h6>
+    </div>
+    <div class="card-body">
+      <form action="/blog-create" method="post" enctype="multipart/form-data">
+        <div class="form-row">
+          
+          <div class="form-group col-lg-8">
+            <label for="title">Blog Title</label>
+            <input type="text" class="form-control" name="title" placeholder="Enter blog title" required>
+          </div>
+
+          <div class="form-group col-lg-4">
+            <label for="author">Author Name</label>
+            <input type="text" class="form-control" name="author" placeholder="Author name" required>
+          </div>
+
+          <div class="form-group col-lg-6">
+            <label for="category">Category</label>
+            <select class="form-control" name="category">
+              <option value="Real Estate">Real Estate</option>
+              <option value="Market Trends">Market Trends</option>
+              <option value="Home Decor">Home Decor</option>
+              <option value="Investment">Investment</option>
+            </select>
+          </div>
+
+          <div class="form-group col-lg-6">
+            <label for="image">Featured Image</label>
+            <input type="file" class="form-control-file" id="image" name="image" accept="image/*">
+            <small class="text-muted">Upload a high-quality JPG, PNG, or WebP.</small>
+          </div>
+
+          <div class="form-group col-lg-12">
+            <label for="description">Blog Content</label>
+            <textarea id="description" name="description" rows="10" class="form-control" placeholder="Write your blog post here..."></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary shadow-sm">
+           <i class="fas fa-save fa-sm text-white-50"></i> Publish Blog
+        </button>
+        <a href="/blogs-admin" class="btn btn-secondary shadow-sm">Cancel</a>
+      </form>
+    </div>
+  </div>
+</div>

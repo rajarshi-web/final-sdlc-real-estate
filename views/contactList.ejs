@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./layouts/head.ejs') %>
+
+<body id="page-top">
+    <div id="wrapper">
+        <%- include('./layouts/sidebar.ejs') %>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <%- include('./layouts/topbar.ejs') %>
+                <div class="container-fluid">
+                    <h1 class="h3 mb-4 text-gray-800">Inquiry Messages</h1>
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Customer Submissions</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Sender Details</th>
+                                            <th>Subject</th>
+                                            <th>Message</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% if (messages.length > 0) { %>
+                                            <% messages.forEach(msg => { %>
+                                                <tr>
+                                                    <td><%= new Date(msg.createdAt).toLocaleDateString() %></td>
+                                                    <td>
+                                                        <strong><%= msg.name %></strong><br>
+                                                        <small><%= msg.email %></small><br>
+                                                        <small><%= msg.phone %></small>
+                                                    </td>
+                                                    <td><%= msg.subject %></td>
+                                                    <td><%= msg.message %></td>
+                                                    <td>
+                                                        <a href="/contact/delete/<%= msg._id %>" 
+                                                           class="btn btn-danger btn-sm" 
+                                                           onclick="return confirm('Delete this message?')">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            <% }) %>
+                                        <% } else { %>
+                                            <tr>
+                                                <td colspan="5" class="text-center">No messages found.</td>
+                                            </tr>
+                                        <% } %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%- include('./layouts/footer.ejs') %>
+        </div>
+    </div>
+</body>
+</html>

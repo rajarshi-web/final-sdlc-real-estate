@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verify OTP</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/css/sb-admin-2.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-warning">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 mt-5">
+                <div class="card p-5">
+                    <h3 class="text-center">Verify Your Email</h3>
+                    <p class="text-center text-muted">A code was sent to: <strong><%= email %></strong></p>
+                    <form action="/verify-email" method="POST">
+                        <input type="hidden" name="email" value="<%= email %>">
+                        <div class="form-group">
+                            <label>Enter 6-Digit OTP</label>
+                            <input type="text" name="otp" class="form-control text-center" style="font-size: 24px; letter-spacing: 10px;" maxlength="6" required>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block">Verify OTP</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

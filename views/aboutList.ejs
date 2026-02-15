@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./layouts/head.ejs') %>
+<body id="page-top">
+    <div id="wrapper">
+        <%- include('./layouts/sidebar.ejs') %>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <%- include('./layouts/topbar.ejs') %>
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Content Management</h1>
+                        <a href="/content-add" class="btn btn-sm btn-primary shadow-sm">
+                            <i class="fas fa-plus fa-sm text-white-50"></i> Add New Content
+                        </a>
+                    </div>
+                    <div class="card shadow mb-4">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Image</th>
+                                            <th>Title</th>
+                                            <th>Customers</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% contents.forEach(item => { %>
+                                            <tr>
+                                                <td><img src="/uploads/<%= item.mainImage %>" width="60"></td>
+                                                <td><%= item.mainTitle %></td>
+                                                <td><%= item.customerCount %></td>
+                                                <td>
+                                                    <a href="/content-edit/<%= item._id %>" class="btn btn-warning btn-sm">Edit</a>
+                                                    <a href="/content/delete/<%= item._id %>" class="btn btn-danger btn-sm" onclick="return confirm('Delete?')">Delete</a>
+                                                </td>
+                                            </tr>
+                                        <% }) %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%- include('./layouts/footer.ejs') %>
+        </div>
+    </div>
+</body>
+</html>

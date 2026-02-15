@@ -1,0 +1,36 @@
+<%- include('./layouts/head.ejs') %>
+<body id="page-top">
+    <div id="wrapper">
+        <%- include('./layouts/sidebar.ejs') %>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <%- include('./layouts/topbar.ejs') %>
+                <div class="container-fluid">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3"><h6 class="m-0 font-weight-bold text-primary">Add New Service</h6></div>
+                        <div class="card-body">
+                            <form action="/services/create" method="POST">
+                                <div class="form-group">
+                                    <label>Service Title</label>
+                                    <input type="text" name="title" class="form-control" placeholder="e.g. Interior Design" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Icon Class (FontAwesome)</label>
+                                    <input type="text" name="iconClass" class="form-control" placeholder="e.g. fas fa-paint-brush" required>
+                                    <small class="text-muted">Use <a href="https://fontawesome.com/icons" target="_blank">FontAwesome</a> class names.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea name="description" class="form-control" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Save Service</button>
+                                <a href="/services-list" class="btn btn-secondary">Cancel</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%- include('./layouts/footer.ejs') %>
+        </div>
+    </div>
+</body>

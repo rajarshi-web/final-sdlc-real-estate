@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./layouts/head.ejs') %>
+<body id="page-top">
+    <div id="wrapper">
+        <%- include('./layouts/sidebar.ejs') %>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <%- include('./layouts/topbar.ejs') %>
+                <div class="container-fluid">
+                    <h1 class="h3 mb-4 text-gray-800">Edit About Us</h1>
+                    
+                    <form action="/content/update" method="POST" enctype="multipart/form-data">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3"><h6 class="m-0 font-weight-bold text-primary">Main Section</h6></div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label>Main Title</label>
+                                    <input type="text" name="mainTitle" class="form-control" value="<%= aboutData.mainTitle || '' %>">
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea name="description" class="form-control" rows="4"><%= aboutData.description || '' %></textarea>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Customer Count</label>
+                                            <input type="text" name="customerCount" class="form-control" value="<%= aboutData.customerCount || '' %>">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Main Image</label>
+                                            <input type="file" name="mainImage" class="form-control-file">
+                                            <% if(aboutData.mainImage) { %>
+                                                <img src="/uploads/<%= aboutData.mainImage %>" width="100" class="mt-2 img-thumbnail">
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3"><h6 class="m-0 font-weight-bold text-success">Our Skills (Top 3)</h6></div>
+                            <div class="card-body">
+                                <% for(let i=0; i<3; i++) { %>
+                                    <div class="row mb-2">
+                                        <div class="col-md-8">
+                                            <input type="text" name="skills[<%=i%>][name]" class="form-control" placeholder="Skill Name" value="<%= aboutData.skills && aboutData.skills[i] ? aboutData.skills[i].name : '' %>">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input type="number" name="skills[<%=i%>][percentage]" class="form-control" placeholder="%" value="<%= aboutData.skills && aboutData.skills[i] ? aboutData.skills[i].percentage : '' %>">
+                                        </div>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block btn-lg mb-5">Update All About Data</button>
+                    </form>
+                </div>
+            </div>
+            <%- include('./layouts/footer.ejs') %>
+        </div>
+    </div>
+</body>
+</html>
