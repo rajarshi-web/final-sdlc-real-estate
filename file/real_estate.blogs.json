@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "69920241b92f0f9cfb8ecfa9"
+  },
+  "title": "Title",
+  "description": "asdfgh",
+  "author": "Rajarshi Mandal",
+  "image": "1771176756846.jpg",
+  "category": "Market Trends",
+  "status": true,
+  "createdAt": {
+    "$date": "2026-02-15T17:28:33.518Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-15T17:32:36.941Z"
+  },
+  "__v": 0
+}]

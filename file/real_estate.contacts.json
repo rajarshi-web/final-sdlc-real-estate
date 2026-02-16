@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "69778982f3599c34d2d49d8e"
+  },
+  "name": "John Doe",
+  "phone": "9876543210",
+  "email": "john@email.com",
+  "subject": "Inquiry",
+  "message": "I want to know more about your services",
+  "createdAt": {
+    "$date": "2026-01-26T15:34:26.521Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-26T15:34:26.521Z"
+  },
+  "__v": 0
+}]

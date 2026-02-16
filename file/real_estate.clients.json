@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "698f636b991e1260b5e74643"
+  },
+  "subtitle": "My Self Rohini",
+  "title": "Kinderjoy ",
+  "description": "I'm a Bot",
+  "name": "Partho Biswas",
+  "role": "Bold",
+  "image": "1771004777543.jpg",
+  "createdAt": {
+    "$date": "2026-02-13T17:46:19.235Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-13T17:46:19.235Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698f6aa344aeb328c5fbc28b"
+  },
+  "subtitle": "Mean-1",
+  "title": "Boss mode",
+  "description": "ALa***",
+  "name": "Thomas Nicols",
+  "role": "Happy",
+  "image": "1771007323278.png",
+  "createdAt": {
+    "$date": "2026-02-13T18:17:07.017Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-13T18:33:23.346Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,99 @@
+[{
+  "_id": {
+    "$oid": "698a196eb4ddc345d9660045"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-02-09T17:29:24.895Z"
+  },
+  "customerCount": "850+",
+  "description": "With over 20 years of experience, we help you find the perfect home with ease and transparency.",
+  "journey": [
+    {
+      "year": "2010",
+      "title": "The Beginning",
+      "description": "Founded with a mission to simplify property buying.",
+      "image": "uploads/history_2010.jpg",
+      "_id": {
+        "$oid": "698a1ba0a083fd016f7857f9"
+      }
+    },
+    {
+      "year": "2018",
+      "title": "Global Expansion",
+      "description": "Opened offices in London, Dubai, and Singapore.",
+      "image": "",
+      "_id": {
+        "$oid": "698a1ba0a083fd016f7857fa"
+      }
+    }
+  ],
+  "mainTitle": "Expert Real Estate Solutions",
+  "skills": [
+    {
+      "name": "Market Valuation",
+      "percentage": 95,
+      "_id": {
+        "$oid": "698a1ba0a083fd016f7857fb"
+      }
+    },
+    {
+      "name": "Legal Consultation",
+      "percentage": 88,
+      "_id": {
+        "$oid": "698a1ba0a083fd016f7857fc"
+      }
+    },
+    {
+      "name": "Interior Staging",
+      "percentage": 75,
+      "_id": {
+        "$oid": "698a1ba0a083fd016f7857fd"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2026-02-09T17:38:40.524Z"
+  },
+  "mainImage": "uploads/about_hero_1707501234.png"
+},
+{
+  "_id": {
+    "$oid": "699097b03de8c67c22bc27cf"
+  },
+  "mainTitle": "Tum Hi Ho",
+  "description": "asdfghj",
+  "mainImage": "1771083696274.jpg",
+  "customerCount": "200",
+  "skills": [
+    {
+      "name": "",
+      "percentage": null,
+      "_id": {
+        "$oid": "699097b03de8c67c22bc27d0"
+      }
+    },
+    {
+      "name": "",
+      "percentage": null,
+      "_id": {
+        "$oid": "699097b03de8c67c22bc27d1"
+      }
+    },
+    {
+      "name": "",
+      "percentage": null,
+      "_id": {
+        "$oid": "699097b03de8c67c22bc27d2"
+      }
+    }
+  ],
+  "journey": [],
+  "createdAt": {
+    "$date": "2026-02-14T15:41:36.405Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-14T15:41:36.405Z"
+  },
+  "__v": 0
+}]

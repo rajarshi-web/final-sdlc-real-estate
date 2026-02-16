@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "6980b835da468aa6bccf7ff8"
+  },
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "comment": "This is a really insightful post! Thanks for sharing the real estate market updates.",
+  "status": true,
+  "createdAt": {
+    "$date": "2026-02-02T14:44:05.126Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T14:44:05.126Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6980b845da468aa6bccf7ffa"
+  },
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "comment": "This is a really insightful post! Thanks for sharing the real estate market updates.",
+  "status": true,
+  "createdAt": {
+    "$date": "2026-02-02T14:44:21.261Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T14:44:21.261Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6980b8782e8b64eef4da3c1b"
+  },
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "comment": "This is a really insightful post! Thanks for sharing the real estate market updates.",
+  "status": true,
+  "createdAt": {
+    "$date": "2026-02-02T14:45:12.551Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T14:45:12.551Z"
+  },
+  "__v": 0
+}]

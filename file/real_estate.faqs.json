@@ -1,0 +1,90 @@
+[{
+  "_id": {
+    "$oid": "6980a3aea032d4355b249414"
+  },
+  "question": "What payment methods do you accept?",
+  "answer": "We currently accept all major credit cards, PayPal, and Apple Pay.",
+  "status": true,
+  "createdAt": {
+    "$date": "2026-02-02T13:16:30.957Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T13:16:30.957Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69908067ed333ead93951bf4"
+  },
+  "question": "What is Bare Minimum",
+  "answer": "asdfg",
+  "status": true,
+  "createdAt": {
+    "$date": "2026-02-14T14:02:15.096Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-14T14:02:15.096Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6990809a30f2860e5adb4453"
+  },
+  "question": "What is Bare Minimum",
+  "answer": "asdfg",
+  "status": true,
+  "createdAt": {
+    "$date": "2026-02-14T14:03:06.227Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-14T14:03:06.227Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "699080bff726395d83bd0139"
+  },
+  "question": "What is Bare Minimum",
+  "answer": "asdfg",
+  "status": true,
+  "createdAt": {
+    "$date": "2026-02-14T14:03:43.310Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-14T14:03:43.310Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "699080dcf726395d83bd013f"
+  },
+  "question": "What is Bare Minimum",
+  "answer": "tyhj",
+  "status": true,
+  "createdAt": {
+    "$date": "2026-02-14T14:04:12.867Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-14T14:04:12.867Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "699081248548876962f1f8e3"
+  },
+  "question": "What is Bare Minimum",
+  "answer": "tyhj",
+  "status": true,
+  "createdAt": {
+    "$date": "2026-02-14T14:05:24.192Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-14T14:05:24.192Z"
+  },
+  "__v": 0
+}]

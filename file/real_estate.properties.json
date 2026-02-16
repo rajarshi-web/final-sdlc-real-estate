@@ -1,0 +1,29 @@
+[{
+  "_id": {
+    "$oid": "699201fab92f0f9cfb8ecfa2"
+  },
+  "title": "Villa-3",
+  "description": "asdfghjkl;",
+  "price": 14500000,
+  "location": {
+    "address": "",
+    "city": "",
+    "state": "",
+    "country": "India"
+  },
+  "propertyType": "villa",
+  "status": "available",
+  "images": [
+    "1771176442635.jpg"
+  ],
+  "createdBy": {
+    "$oid": "6991438774652d75a4aae614"
+  },
+  "createdAt": {
+    "$date": "2026-02-15T17:27:22.892Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-15T17:33:38.329Z"
+  },
+  "__v": 0
+}]

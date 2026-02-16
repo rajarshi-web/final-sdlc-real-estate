@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "699094ed6e9fe3131c1430c7"
+  },
+  "name": "Rm Groups ",
+  "post": "UI UX Designer",
+  "image": "1771082989234.jpg",
+  "createdAt": {
+    "$date": "2026-02-14T15:29:49.243Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-14T15:29:56.051Z"
+  },
+  "__v": 0
+}]
